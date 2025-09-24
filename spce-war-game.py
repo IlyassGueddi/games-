@@ -69,6 +69,8 @@ while running:
     # player
     playerY += playerY_change
     playerX += playerX_change
+    enemyX += enemyX_change
+    enemyY += enemyY_change
 
     if playerX <= 0:
         playerX = 0
@@ -87,9 +89,9 @@ while running:
         enemyX_change = -0.3
 
     if enemyY <= 0:
-        enemyY_change = 0.3
-    elif enemyY >= 540:
-        enemyY_change = -0.3
+        enemyY_change = 0.1
+    elif enemyY >= 380:
+        enemyY_change = -0.1
 
 
     enemy(enemyX, enemyY)
